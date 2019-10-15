@@ -1,12 +1,10 @@
 package com.xunmengyiran.utils;
 
 
-import com.xunmengyiran.Constants;
+import com.xunmengyiran.constants.Constants;
 
 import java.text.DecimalFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -21,7 +19,7 @@ public class SJUtils {
      */
     public static Integer calculatingAge(String birthday) {
         int birthday_year = Integer.parseInt(birthday.substring(0, 4));
-        int now_year = Integer.parseInt(Constants.Date_Format.sdf0.format(new Date()));
+        int now_year = Integer.parseInt(Constants.DATE_FORMAT.sdf0.format(new Date()));
         return now_year - birthday_year;
     }
 
@@ -31,8 +29,8 @@ public class SJUtils {
      * @param birthday
      */
     public static Integer calculatingAge(Date birthday) {
-        int birthday_year = Integer.parseInt(Constants.Date_Format.sdf0.format(birthday));
-        int now_year = Integer.parseInt(Constants.Date_Format.sdf0.format(new Date()));
+        int birthday_year = Integer.parseInt(Constants.DATE_FORMAT.sdf0.format(birthday));
+        int now_year = Integer.parseInt(Constants.DATE_FORMAT.sdf0.format(new Date()));
         return now_year - birthday_year;
     }
 
@@ -45,7 +43,7 @@ public class SJUtils {
     public static Date dayToDate(long day) {
         Date date = null;
         try {
-            date = Constants.Date_Format.sdf4.parse("1970-01-01");
+            date = Constants.DATE_FORMAT.sdf4.parse("1970-01-01");
         } catch (ParseException e) {
             e.printStackTrace();
         }
