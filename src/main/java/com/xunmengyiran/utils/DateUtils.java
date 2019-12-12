@@ -1,6 +1,6 @@
 package com.xunmengyiran.utils;
 
-import com.xunmengyiran.Constants;
+import com.xunmengyiran.constants.Constants;
 
 import java.util.Date;
 
@@ -12,7 +12,7 @@ public class DateUtils {
      * @return String
      */
     public static String date2String1(Date date) {
-        String dateStr = Constants.Date_Format.sdf1.format(date);
+        String dateStr = Constants.DATE_FORMAT.sdf1.format(date);
         System.out.println("成功。。。。。。。");
         return dateStr;
     }
@@ -23,7 +23,7 @@ public class DateUtils {
      * @return
      */
     public static String date2String2(Date date) {
-        String dateStr = Constants.Date_Format.sdf2.format(date);
+        String dateStr = Constants.DATE_FORMAT.sdf2.format(date);
         return dateStr;
     }
 
