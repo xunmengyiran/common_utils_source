@@ -19,3 +19,9 @@
                 <url>http://jcenter.bintray.com</url>
             </repository>
     </repositories>
+
+        <dependency>
+            <groupId>com.xunmengyiran</groupId>
+            <artifactId>CommonUtils</artifactId>
+            <version>1.0.1</version>
+        </dependency>
